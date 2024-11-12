@@ -6,30 +6,39 @@ using System.Threading.Tasks;
 
 namespace Laboratory_work_2
 {
-    public class Games
+    public class Game
     {
-        private string Name;
-        private double Price;
+        private string name_;
+        private decimal price_;
+        private int quantity_;
+        private Genre genre_;
 
-        public void SetName(string n)
+        public Game(string name, decimal price, int quantity, Genre genre)
         {
-            Name = n;
+            name_ = name;
+            price_ = price;
+            quantity_ = quantity;
+            genre_ = genre;
         }
-        
+
         public string GetName()
-        { 
-            return Name; 
+        {
+            return name_;
         }
 
-        public void SetPrice(double p)
+        public decimal GetPrice()
         {
-            p = Price;
+            return price_;
         }
 
-        public Games(string namee, double pricee)
+        public int GetQuantity()
         {
-            Name = namee;
-            Price = pricee;
+            return quantity_;
+        }
+
+        public Genre GetGenre()
+        {
+            return genre_;
         }
     }
 }
