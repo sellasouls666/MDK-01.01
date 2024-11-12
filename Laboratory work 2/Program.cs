@@ -10,13 +10,13 @@ namespace Laboratory_work_2
     {
         static void Main(string[] args)
         {
-            List<Game> games = new List<Game>()
+            List<Games> games = new List<Games>()
             {
-                new Game("The Witcher 3: Wild Hunt", Genre.Action, 59.99m),
-                new Game("Red Dead Redemption II", Genre.Adventure, 39.99m),
-                new Game("The Elder Scrolls V: Skyrim", Genre.RPG, 49.99m),
-                new Game("Pro Evolution Soccer 5", Genre.Sports, 19.99m),
-                new Game("DOTA 2", Genre.Strategy, 49.99m)
+                new Games("The Witcher 3: Wild Hunt", Genre.Action, 59.99m),
+                new Games("Red Dead Redemption II", Genre.Adventure, 39.99m),
+                new Games("The Elder Scrolls V: Skyrim", Genre.RPG, 49.99m),
+                new Games("Pro Evolution Soccer 5", Genre.Sports, 19.99m),
+                new Games("DOTA 2", Genre.Strategy, 49.99m)
             };
 
             Dictionary<Genre, (int totalSales, decimal totalRevenue)> salesReport = new Dictionary<Genre, (int totalSales, decimal totalRevenue)>();
