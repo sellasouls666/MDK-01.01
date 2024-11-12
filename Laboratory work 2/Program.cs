@@ -15,6 +15,8 @@ namespace Laboratory_work_2
             report.AddSale(new SalesRealization(1, new Game("The Witcher 3: Wild Hunt", 2923.00, 10, Genre.Action)));
             report.AddSale(new SalesRealization(2, new Game("Red Dead Redemption II", 1690.00, 8, Genre.Adventure)));
             report.AddSale(new SalesRealization(3, new Game("The Elder Scrolls V: Skyrim", 1391.00, 5, Genre.RPG)));
+
+            report.GetAll();
         }
     }
 }
