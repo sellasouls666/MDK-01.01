@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Laboratory_work_2
 {
-    enum Genre
+    public enum Genre
     {
         Action,
         Adventure,
