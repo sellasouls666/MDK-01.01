@@ -21,12 +21,5 @@ namespace Laboratory_work_2
             salesRealizations.Add(realization);
         }
 
-        public void GetAll()
-        {
-            foreach (var realization in salesRealizations)
-            {
-                Console.WriteLine($"Игра: {realization.GetGame.GetName())}, количество:");
-            }
-        }
     }
 }
