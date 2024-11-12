@@ -10,8 +10,6 @@ namespace Laboratory_work_2
     {
         Action,
         Adventure,
-        RPG,
-        Strategy,
-        Sports
+        RPG
     }
 }
