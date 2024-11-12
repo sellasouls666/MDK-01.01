@@ -6,15 +6,25 @@ using System.Threading.Tasks;
 
 namespace Laboratory_work_2
 {
-    public struct SalesRealization
+    public class SalesRealization
     {
-        public int quantity;
-        public int day;
-        public string genre;
-    }
+        private int day_;
+        private Game game_;
 
-    public void AddSale(string genree, int quantityy, int dayy)
-    {
-        SalesRealization sale = new SalesRealization { genre = genree, day = dayy, quantity = quantityy };
+        public SalesRealization(int day, Game game)
+        {
+            day_ = day;
+            game_ = game;
+        }
+
+        public int GetDay()
+        {
+            return day_;
+        }
+
+        public Game GetGame()
+        {
+            return game_;
+        }
     }
 }
