@@ -9,11 +9,11 @@ namespace Laboratory_work_2
     public class Game
     {
         private string name_;
-        private decimal price_;
+        private double price_;
         private int quantity_;
         private Genre genre_;
 
-        public Game(string name, decimal price, int quantity, Genre genre)
+        public Game(string name, double price, int quantity, Genre genre)
         {
             name_ = name;
             price_ = price;
@@ -26,7 +26,7 @@ namespace Laboratory_work_2
             return name_;
         }
 
-        public decimal GetPrice()
+        public double GetPrice()
         {
             return price_;
         }

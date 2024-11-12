@@ -1,12 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp5
+namespace Laboratory_work_2
 {
-    internal class SalesReport
+    public class SalesReport
     {
+        private List<SalesRealization> salesRealizations;
+        
+        public SalesReport()
+        {
+            salesRealizations = new List<SalesRealization>();
+        }
+
+        public void AddSale(SalesRealization realization)
+        {
+            salesRealizations.Add(realization);
+        }
+
     }
 }
