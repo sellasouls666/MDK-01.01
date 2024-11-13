@@ -27,7 +27,7 @@ namespace Laboratory_work_2
             {
                 var game = realization.GetGame();
 
-                Console.WriteLine($"Название: {game.GetName()}, Жанр: {game.GetGenre()}, цена: {game.GetPrice()}, количество: {game.GetQuantity()}, общая выручка: {game.GetPrice() * game.GetQuantity()})");
+                Console.WriteLine($"Название: {game.GetName()}, Жанр: {game.GetGenre()}, цена: {game.GetPrice()}, количество: {game.GetQuantity()}, общая выручка от игры: {game.GetPrice() * game.GetQuantity()})");
             }
         }
     }
