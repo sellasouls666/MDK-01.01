@@ -21,5 +21,14 @@ namespace Laboratory_work_2
             salesRealizations.Add(realization);
         }
 
+        public void PrintReport()
+        {
+            foreach (var realization in salesRealizations)
+            {
+                var game = realization.GetGame();
+
+                Console.WriteLine($"Название: {game.GetName()}, Жанр: {game.GetGenre()}, цена: {game.GetPrice()}, количество: {game.GetQuantity()}, общая выручка: {game.GetPrice() * game.GetQuantity()})");
+            }
+        }
     }
 }
