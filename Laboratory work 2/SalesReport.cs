@@ -23,12 +23,15 @@ namespace Laboratory_work_2
 
         public void PrintReport()
         {
+            double totalRevenue = 0;
             foreach (var realization in salesRealizations)
             {
                 var game = realization.GetGame();
 
-                Console.WriteLine($"День: {realization.GetDay()}, Название игры: {game.GetName()}, Жанр: {game.GetGenre()}, цена: {game.GetPrice()}, количество: {game.GetQuantity()}, общая выручка от игры: {game.GetPrice() * game.GetQuantity()})");
+                Console.WriteLine($"День: {realization.GetDay()}, Название игры: {game.GetName()}, Жанр: {game.GetGenre()}, цена: {game.GetPrice()}, количество: {game.GetQuantity()}, выручка от игры: {game.GetPrice() * game.GetQuantity()}");
+                totalRevenue += game.GetQuantity() * game.GetPrice();
             }
+            Console.WriteLine($"Общая выручка: {totalRevenue}");
         }
     }
 }
