@@ -19,8 +19,21 @@ namespace Laboratory_work_2
             report.AddSale(new SalesRealization(3, new Game("Tomb Raider", 1069.00, 16, Genre.Adventure)));
             report.AddSale(new SalesRealization(3, new Game("The Elder Scrolls V: Skyrim", 1391.00, 5, Genre.RPG)));
 
-            Console.WriteLine("Отчёт: ");
-            report.PrintReport();
+            int reportType;
+            Console.WriteLine("Выберите вид отчёта (0 - весь, 1 - по дням, 2 - по жанрам): ");
+            reportType = Convert.ToInt32(Console.ReadLine());
+            if (reportType == 0)
+            {
+                report.PrintReportAll();
+            }
+            else if (reportType == 1)
+            {
+                report.PrintReportPerDay();
+            }
+            else
+            {
+                Console.WriteLine("Недопустимое значение");
+            }
         }
     }
 }

@@ -21,7 +21,7 @@ namespace Laboratory_work_2
             salesRealizations.Add(realization);
         }
 
-        public void PrintReport()
+        public void PrintReportAll()
         {
             double totalRevenue = 0;
             foreach (var realization in salesRealizations)
@@ -30,6 +30,24 @@ namespace Laboratory_work_2
 
                 Console.WriteLine($"День: {realization.GetDay()}, Название игры: {game.GetName()}, Жанр: {game.GetGenre()}, цена: {game.GetPrice()}, количество: {game.GetQuantity()}, выручка от игры: {game.GetPrice() * game.GetQuantity()}");
                 totalRevenue += game.GetQuantity() * game.GetPrice();
+            }
+            Console.WriteLine($"Общая выручка: {totalRevenue}");
+        }
+
+        public void PrintReportPerDay()
+        {
+            int day;
+            Console.WriteLine("Выберите день: ");
+            day = Convert.ToInt32(Console.ReadLine());
+            double totalRevenue = 0;
+            foreach (var realization in salesRealizations)
+            {
+                var game = realization.GetGame();
+                if (day == realization.GetDay())
+                {
+                    Console.WriteLine($"День: {realization.GetDay()}, Название игры: {game.GetName()}, Жанр: {game.GetGenre()}, цена: {game.GetPrice()}, количество: {game.GetQuantity()}, выручка от игры: {game.GetPrice() * game.GetQuantity()}");
+                    totalRevenue += game.GetQuantity() * game.GetPrice();
+                }
             }
             Console.WriteLine($"Общая выручка: {totalRevenue}");
         }
