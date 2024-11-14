@@ -49,7 +49,14 @@ namespace Laboratory_work_2
                     totalRevenue += game.GetQuantity() * game.GetPrice();
                 }
             }
-            Console.WriteLine($"Общая выручка: {totalRevenue}");
+            if (totalRevenue != 0)
+            {
+                Console.WriteLine($"Общая выручка: {totalRevenue}");
+            }
+            if (totalRevenue == 0)
+            {
+                Console.WriteLine("В данный день продаж не было.");
+            }
         }
     }
 }
