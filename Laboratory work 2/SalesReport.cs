@@ -58,5 +58,30 @@ namespace Laboratory_work_2
                 Console.WriteLine("В данный день продаж не было.");
             }
         }
+
+        public void PrintReportPerGenre()
+        {
+            string genre;
+            Console.WriteLine("Введите жанр: ");
+            genre = Console.ReadLine();
+            double totalRevenue = 0;
+            foreach (var realization in salesRealizations)
+            {
+                var game = realization.GetGame();
+                if (genre == Convert.ToString(game.GetGenre()))
+                {
+                    Console.WriteLine($"День: {realization.GetDay()}, Название игры: {game.GetName()}, Жанр: {game.GetGenre()}, цена: {game.GetPrice()}, количество: {game.GetQuantity()}, выручка от игры: {game.GetPrice() * game.GetQuantity()}");
+                    totalRevenue += game.GetQuantity() * game.GetPrice();
+                }
+            }
+            if (totalRevenue != 0)
+            {
+                Console.WriteLine($"Общая выручка: {totalRevenue}");
+            }
+            if (totalRevenue == 0)
+            {
+                Console.WriteLine("Введённый жанр не найден.");
+            }
+        }
     }
 }

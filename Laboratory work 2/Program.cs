@@ -20,7 +20,7 @@ namespace Laboratory_work_2
             report.AddSale(new SalesRealization(3, new Game("The Elder Scrolls V: Skyrim", 1391.00, 5, Genre.RPG)));
 
             int reportType;
-            Console.WriteLine("Выберите вид отчёта (0 - весь, 1 - по дням): ");
+            Console.WriteLine("Выберите вид отчёта (0 - весь, 1 - по дням, 2 - по жанрам): ");
             reportType = Convert.ToInt32(Console.ReadLine());
             if (reportType == 0)
             {
@@ -29,6 +29,10 @@ namespace Laboratory_work_2
             else if (reportType == 1)
             {
                 report.PrintReportPerDay();
+            }
+            else if (reportType == 2)
+            {
+                report.PrintReportPerGenre();
             }
             else
             {
